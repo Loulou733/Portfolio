@@ -45,11 +45,11 @@ function Navbar() {
         ? 'bg-[#0d1117]/98 backdrop-blur-xl border-b border-white/20 shadow-2xl shadow-black/50'
         : 'bg-gradient-to-b from-[#0a0e1a]/95 to-[#0a0e1a]/80 backdrop-blur-xl border-b border-sky-500/20 shadow-lg shadow-black/20'
     }`}>
-      <div className="max-w-6xl mx-auto w-full flex justify-between items-center px-4 md:px-6 py-4">
+      <div className="max-w-6xl mx-auto w-full flex justify-between items-center px-3 sm:px-4 md:px-6 py-3 sm:py-4">
         {/* Logo with better visibility */}
         <button
           onClick={() => scrollToSection('home')}
-          className="text-xl font-bold text-white hover:text-sky-400 transition-all duration-300 hover:scale-105 cursor-pointer drop-shadow-[0_2px_8px_rgba(56,189,248,0.5)]"
+          className="text-lg sm:text-xl font-bold text-white hover:text-sky-400 transition-all duration-300 hover:scale-105 cursor-pointer drop-shadow-[0_2px_8px_rgba(56,189,248,0.5)]"
         >
           <span className="bg-gradient-to-r from-white via-sky-300 to-sky-500 bg-clip-text text-transparent">
             Loevan.dev
@@ -57,7 +57,7 @@ function Navbar() {
         </button>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
               <button
@@ -80,12 +80,12 @@ function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 rounded-lg hover:bg-slate-800 transition-colors"
+          className="md:hidden w-9 h-9 sm:w-10 sm:h-10 flex flex-col justify-center items-center gap-1 sm:gap-1.5 rounded-lg hover:bg-slate-800 transition-colors"
           aria-label="Toggle menu"
         >
-          <span className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-          <span className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`w-5 sm:w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-1.5 sm:translate-y-2' : ''}`} />
+          <span className={`w-5 sm:w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
+          <span className={`w-5 sm:w-6 h-0.5 bg-white rounded-full transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5 sm:-translate-y-2' : ''}`} />
         </button>
       </div>
 
@@ -93,12 +93,12 @@ function Navbar() {
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${
         isOpen ? 'max-h-96 border-b border-white/10' : 'max-h-0'
       }`}>
-        <ul className="px-4 py-4 space-y-2 bg-[#0d1117]/95 backdrop-blur-md">
+        <ul className="px-3 sm:px-4 py-3 sm:py-4 space-y-1.5 sm:space-y-2 bg-[#0d1117]/95 backdrop-blur-md">
           {navLinks.map((link, index) => (
             <li key={link.href} style={{ animationDelay: `${index * 50}ms` }}>
               <button
                 onClick={() => scrollToSection(link.href)}
-                className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                className={`w-full text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === link.href
                     ? 'bg-sky-500 text-white'
                     : 'text-slate-300 hover:bg-slate-800 hover:text-white'
