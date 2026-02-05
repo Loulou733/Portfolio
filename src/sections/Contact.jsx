@@ -14,15 +14,15 @@ function Contact() {
   const [leftRef, leftVisible] = useScrollReveal();
   const [rightRef, rightVisible] = useScrollReveal();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     subject: '',
     message: ''
   });
 
   const [formStatus, setFormStatus] = useState('');
 
-  const maxLengths = { name: 100, email: 150, subject: 200, message: 2000 };
+  const maxLengths = { from_name: 100, from_email: 150, subject: 200, message: 2000 };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,7 +49,7 @@ function Contact() {
     emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, EMAILJS_PUBLIC_KEY)
       .then(() => {
         setFormStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ from_name: '', from_email: '', subject: '', message: '' });
         setTimeout(() => setFormStatus(''), 3000);
       })
       .catch(() => {
@@ -168,14 +168,14 @@ function Contact() {
               <div className="space-y-3 sm:space-y-4">
                 {/* Name input */}
                 <div>
-                  <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2">
+                  <label htmlFor="from_name" className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2">
                     Nom complet
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="from_name"
+                    name="from_name"
+                    value={formData.from_name}
                     onChange={handleChange}
                     required
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all"
@@ -185,14 +185,14 @@ function Contact() {
 
                 {/* Email input */}
                 <div>
-                  <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2">
+                  <label htmlFor="from_email" className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2">
                     Email
                   </label>
                   <input
                     type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
+                    id="from_email"
+                    name="from_email"
+                    value={formData.from_email}
                     onChange={handleChange}
                     required
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all"
