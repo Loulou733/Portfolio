@@ -18,7 +18,8 @@ function Projects() {
       tags: ["React", "TypeScript", "Node.js", "Prisma", "SQLite"],
       category: "personnel",
       badge: "Projet personnel",
-      color: "from-blue-500 to-indigo-500"
+      color: "from-blue-500 to-indigo-500",
+      github: "https://github.com/loevanpro-dev/GarageV2"
     },
     {
       id: 3,
@@ -29,7 +30,8 @@ function Projects() {
       tags: ["React", "Tailwind CSS", "JavaScript"],
       category: "personnel",
       badge: "Projet personnel",
-      color: "from-sky-500 to-blue-500"
+      color: "from-sky-500 to-blue-500",
+      github: "https://github.com/loevanpro-dev/Portfolio"
     },
     {
       id: 4,
@@ -40,7 +42,8 @@ function Projects() {
       tags: ["SQL", "MCD", "MLD", "MPD"],
       category: "scolaire",
       badge: "Projet scolaire",
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
+      github: "https://github.com/loevanpro-dev/BDD-Football"
     },
     {
       id: 7,
@@ -51,7 +54,8 @@ function Projects() {
       tags: ["Recherche", "Green IT", "Écologie"],
       category: "scolaire",
       badge: "Projet scolaire",
-      color: "from-lime-500 to-green-600"
+      color: "from-lime-500 to-green-600",
+      github: "https://github.com/loevanpro-dev/Green-IT"
     },
     {
       id: 8,
@@ -62,7 +66,8 @@ function Projects() {
       tags: ["React", "Node.js", "Tailwind CSS"],
       category: "personnel",
       badge: "Projet personnel",
-      color: "from-amber-500 to-orange-500"
+      color: "from-amber-500 to-orange-500",
+      github: "https://github.com/loevanpro-dev/RevisionApp"
     },
     {
       id: 9,
@@ -73,7 +78,8 @@ function Projects() {
       tags: ["React", "JavaScript", "API", "Statistiques"],
       category: "personnel",
       badge: "Projet personnel",
-      color: "from-red-500 to-rose-500"
+      color: "from-red-500 to-rose-500",
+      github: "https://github.com/loevanpro-dev/PronoStats"
     },
     {
       id: 10,
@@ -84,7 +90,8 @@ function Projects() {
       tags: ["React", "Node.js", "Tailwind CSS", "SQLite"],
       category: "personnel",
       badge: "Projet personnel",
-      color: "from-violet-500 to-purple-500"
+      color: "from-violet-500 to-purple-500",
+      github: "https://github.com/loevanpro-dev/LifeManager"
     },
     {
       id: 11,
@@ -95,7 +102,8 @@ function Projects() {
       tags: ["Python", "Web Scraping", "API", "Automatisation"],
       category: "personnel",
       badge: "Projet personnel",
-      color: "from-teal-500 to-cyan-500"
+      color: "from-teal-500 to-cyan-500",
+      github: "https://github.com/loevanpro-dev/VintedBot"
     },
     {
       id: 12,
@@ -106,7 +114,8 @@ function Projects() {
       tags: ["Python", "MongoDB", "Architecture", "Jeu"],
       category: "scolaire",
       badge: "Projet scolaire",
-      color: "from-emerald-500 to-teal-500"
+      color: "from-emerald-500 to-teal-500",
+      github: "https://github.com/loevanpro-dev/Jeu-Video-MongoDB"
     },
     {
       id: 13,
@@ -117,7 +126,8 @@ function Projects() {
       tags: ["Python", "Pygame", "POO", "Architecture"],
       category: "scolaire",
       badge: "Projet scolaire",
-      color: "from-amber-500 to-yellow-500"
+      color: "from-amber-500 to-yellow-500",
+      github: "https://github.com/loevanpro-dev/Temple-Dieux-Oublies"
     },
     {
       id: 14,
@@ -128,18 +138,8 @@ function Projects() {
       tags: ["Java", "POO", "Héritage", "Polymorphisme"],
       category: "scolaire",
       badge: "Projet scolaire",
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      id: 15,
-      title: "Road Trip Europe",
-      description: "Site web de présentation de circuits road trip à travers l'Europe avec animations JavaScript interactives.",
-      learning: "HTML/CSS responsive, animations JavaScript, présentation visuelle attractive, structure de site web",
-      image: "🚗",
-      tags: ["HTML", "CSS", "JavaScript", "Animations"],
-      category: "scolaire",
-      badge: "Projet scolaire",
-      color: "from-blue-500 to-sky-500"
+      color: "from-red-500 to-orange-500",
+      github: "https://github.com/loevanpro-dev/Combat-Pokemon"
     }
   ];
 
@@ -190,9 +190,12 @@ function Projects() {
         {/* Projects grid */}
         <div ref={gridRef} className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 stagger-children ${gridVisible ? 'visible' : ''}`}>
           {filteredProjects.map((project, index) => (
-            <div
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
               key={project.id}
-              className="group rounded-xl sm:rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm overflow-hidden hover:border-sky-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/20 hover:-translate-y-2"
+              className="group rounded-xl sm:rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm overflow-hidden hover:border-sky-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/20 hover:-translate-y-2 block"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Project image/icon */}
@@ -241,7 +244,7 @@ function Projects() {
                   </span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

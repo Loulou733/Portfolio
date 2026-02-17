@@ -15,9 +15,9 @@ function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: <FaGithub size={18} />, url: 'https://github.com/Loulou733' },
+    { name: 'GitHub', icon: <FaGithub size={18} />, url: 'https://github.com/loevanpro-dev' },
     { name: 'LinkedIn', icon: <FaLinkedinIn size={18} />, url: 'https://www.linkedin.com/in/loevan-le-saint-764100388/' },
-    { name: 'Email', icon: <HiOutlineMail size={18} />, url: 'mailto:loevanlspro@gmail.com' }
+    { name: 'Email', icon: <HiOutlineMail size={18} />, url: 'mailto:loevan733@gmail.com' }
   ];
 
   const scrollToSection = (id) => {
@@ -85,10 +85,10 @@ function Footer() {
               ))}
             </div>
             <a
-              href="mailto:loevanlspro@gmail.com"
+              href="mailto:loevan733@gmail.com"
               className="text-xs sm:text-sm text-slate-400 hover:text-sky-400 transition-colors duration-300 break-all"
             >
-              loevanlspro@gmail.com
+              loevan733@gmail.com
             </a>
           </div>
         </div>
@@ -145,7 +145,7 @@ function Footer() {
                 <h3 className="text-white font-semibold text-sm sm:text-base">Éditeur du site</h3>
                 <p>
                   Ce site est édité par Loevan Le Saint, étudiant en Bachelor Informatique.<br />
-                  Email : loevanlspro@gmail.com
+                  Email : loevan733@gmail.com
                 </p>
 
                 <h3 className="text-white font-semibold text-sm sm:text-base">Hébergement</h3>
@@ -195,7 +195,7 @@ function Footer() {
                 <h3 className="text-white font-semibold text-sm sm:text-base">Vos droits</h3>
                 <p>
                   Conformément au RGPD, vous disposez d&rsquo;un droit d&rsquo;accès, de rectification et de suppression
-                  de vos données. Pour exercer ces droits, contactez-moi à loevanlspro@gmail.com.
+                  de vos données. Pour exercer ces droits, contactez-moi à loevan733@gmail.com.
                 </p>
               </div>
             )}

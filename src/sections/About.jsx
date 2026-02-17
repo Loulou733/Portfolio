@@ -78,7 +78,7 @@ function About() {
               {/* Social links */}
               <div className="mt-4 sm:mt-6 flex gap-3 sm:gap-4">
                 <a
-                  href="https://github.com/Loulou733"
+                  href="https://github.com/loevanpro-dev"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-sky-500/50 flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -96,7 +96,7 @@ function About() {
                   <FaLinkedinIn size={16} className="sm:w-[18px] sm:h-[18px]" />
                 </a>
                 <a
-                  href="mailto:loevanlspro@gmail.com"
+                  href="mailto:loevan733@gmail.com"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-sky-500/50 flex items-center justify-center transition-all duration-300 hover:scale-110"

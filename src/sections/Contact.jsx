@@ -62,8 +62,8 @@ function Contact() {
     {
       icon: <HiOutlineMail className="text-sky-400" size={24} />,
       title: "Email",
-      value: "loevanlspro@gmail.com",
-      link: "mailto:loevanlspro@gmail.com"
+      value: "loevan733@gmail.com",
+      link: "mailto:loevan733@gmail.com"
     },
     {
       icon: <HiOutlineLocationMarker className="text-sky-400" size={24} />,
@@ -74,9 +74,9 @@ function Contact() {
   ];
 
   const socialLinks = [
-    { name: "GitHub", icon: <FaGithub size={20} />, url: "https://github.com/Loulou733", color: "hover:text-gray-400" },
+    { name: "GitHub", icon: <FaGithub size={20} />, url: "https://github.com/loevanpro-dev", color: "hover:text-gray-400" },
     { name: "LinkedIn", icon: <FaLinkedinIn size={20} />, url: "https://www.linkedin.com/in/loevan-le-saint-764100388/", color: "hover:text-blue-400" },
-    { name: "Email", icon: <HiOutlineMail size={20} />, url: "mailto:loevanlspro@gmail.com", color: "hover:text-sky-400" }
+    { name: "Email", icon: <HiOutlineMail size={20} />, url: "mailto:loevan733@gmail.com", color: "hover:text-sky-400" }
   ];
 
   return (
